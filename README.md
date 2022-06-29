@@ -1,65 +1,78 @@
 # React Challenge
 
 Recommended to use:
- - [Context API](https://reactjs.org/docs/context.html)
- - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
- - [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
- - [React Redux](https://react-redux.js.org/)
- - [MUI](https://mui.com/)
- - [Styled Components](https://www.styled-components.com/)
 
-## Instructions
-  - Clone the repository
-  - Install dependencies using `npm install` or `yarn`
-  - Run project
-## Run project
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+- [React Redux](https://react-redux.js.org/)
+- [MUI](https://mui.com/)
+- [Styled Components](https://www.styled-components.com/)
 
-In the project directory, you can run:
-#### `npm start` or `yarn start`
+## Instrucciones
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clona el resositorio
+- Instala las dependecias utilizando `npm install` o `yarn`
 
-## Challenges
+| WARNING: Si tienes `prettier` instalado es necesario que lo desactives, para que no tengas conflictos con eslint. |
+| --- |
 
-### First challenge
-  - Create a new component `FirstChallenge` in `src/containers`
-  - Utilizando la función `getGifts` del archivo `src/utils.js` listar los GIFTS con su respectiva cantidad de veces que se repite.
-  Note: Los regalos que tienen un `_` en su nombre no se deben contabilizar. 
+## Ejecutar el proyecto
+
+En el directorio del proyecto, ejecuta:
+
+#### `npm start` o `yarn start`
+
+Ejecuta la aplicación en el modo de desarrollo.\
+Abra [http://localhost:3000](http://localhost:3000) para verlo en tu navegador.
+
+## Retos
+
+### Primer reto
+
+- Crea un nuevo componente `FirstChallenge` en `src/containers`
+- Utilizando la función `getGifts` del archivo `src/utils.js` listar los GIFTS con su respectiva cantidad de veces que se repite.
+  Note: Los regalos que tienen un `_` en su nombre no se deben contabilizar.
   Ejemplo:
-    - `"phone laptop _card phone _laptop"` la función debe retornar: `{ phone: 2, laptop: 1 }`
+  - `"phone laptop _card phone _laptop"` la función debe retornar: `{ phone: 2, laptop: 1 }`
 
-  **Bonus:**
-  - Implement unit test for the function `getGifts`
+**Bonus:**
 
-### Second challenge
+- Implementa unit test para la función `getGifts`
 
-  - Create a new component `SecondChallenge` in `src/containers`
-  - Use the array of `USERS` from the file `src/utils.js`, list of users showing their avatar and firstName and lastName.
-  - Implementar la funcionabilidad eliminar usuario.
-  - Create a input search and filter by firstName or lastName.
-  - Agregar un select que permita ordenar los usuarios por edad de menor a mayor y de mayor a menor.
+### Segundo reto
 
-  **Bonus:**
-  - Use Material-UI or styled-components to style the component 
-  - Use REDUX y crea el store de users para el manejo de los datos
+- Crear un nuevo componente `SecondChallenge` in `src/containers`
+- Usa el array `USERS` del archivo `src/utils.js`, lista de usuarios mostrando su avatar, nombre, apellido y edad.
+- Implementar la funcionabilidad eliminar usuario.
+- Cree un buscador y filtre por nombre o apellido.
+- Agregar un select que permita ordenar los usuarios por edad de menor a mayor y de mayor a menor.
 
-### Third challenge
-In `src/App.js`:
-  - Create a [`/first`]((http://localhost:3000/first)), [`/second`]((http://localhost:3000/second)), [`/third`]((http://localhost:3000/third)) and [`/fourth`]((http://localhost:3000/fourth)) routes cada una con su respectivo componente.
-  
-    Note: Utilizar el archivo `FirstChallenge.js` para la ruta `/first` and `SecondChallenge.js` para la ruta `/second`
+**Bonus:**
 
-  - In the file `src/components/Header.js` crea unos botones que permitan la navegación entre las 4 rutas creadas utilizando react-router.
+- Utiliza Material-UI or styled-components para los estilos de los componentes
+- Utiliza REDUX y crea el store de users para el manejo de los datos
 
-  **Bonus:** 
-  - Si accede mediante una ruta que no existe debe redireccionar a `/not-found`
+### Tercer reto
 
-### Fourth challenge
-In the file `src/containers/FourthChallenge.js`:
-  - Se necesita evitar que se generen renders innecesarios cuando actualiza uno de los inputs.
+En `src/App.js`:
+
+- Crear las rutas [`/first`](<(http://localhost:3000/first)>), [`/second`](<(http://localhost:3000/second)>), [`/third`](<(http://localhost:3000/third)>) y [`/fourth`](<(http://localhost:3000/fourth)>) cada una con su respectivo componente.
+
+  Nota: Utilizar el archivo `FirstChallenge.js` para la ruta `/first` and `SecondChallenge.js` para la ruta `/second`
+
+- En el archivo `src/components/Header.js` crea unos botones que permitan la navegación entre las 4 rutas creadas utilizando react-router.
+
+**Bonus:**
+
+- Si accede mediante una ruta que no existe debe redireccionar a `/not-found`
+
+### Cuarto reto
+
+En el archivo `src/containers/FourthChallenge.js`:
+
+- Se necesita evitar que se generen renders innecesarios cuando actualiza uno de los inputs.
   Nota: Si se actualiza el input de `Name` el componente `AgeDisplay` no debería generar un render.
 
-  **Bonus:**
-  - Use Material-UI or styled-components to style the components.
-  - Implement unit test
+**Bonus:**
+
+- Implementa unit test
