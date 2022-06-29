@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# React Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Recommended to use:
+ - [Context API](https://reactjs.org/docs/context.html)
+ - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+ - [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+ - [React Redux](https://react-redux.js.org/)
+ - [MUI](https://mui.com/)
+ - [Styled Components](https://www.styled-components.com/)
 
-## Available Scripts
+## Instructions
+  - Clone the repository
+  - Install dependencies using `npm install` or `yarn`
+  - Run project
+## Run project
 
 In the project directory, you can run:
-
-### `npm start`
+#### `npm start` or `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Challenges
 
-### `npm test`
+### First challenge
+  - Create a new component `FirstChallenge` in `src/containers`
+  - Utilizando la función `getGifts` del archivo `src/utils.js` listar los GIFTS con su respectiva cantidad de veces que se repite.
+  Note: Los regalos que tienen un `_` en su nombre no se deben contabilizar. 
+  Ejemplo:
+    - `"phone laptop _card phone _laptop"` la función debe retornar: `{ phone: 2, laptop: 1 }`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  **Bonus:**
+  - Implement unit test for the function `getGifts`
 
-### `npm run build`
+### Second challenge
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - Create a new component `SecondChallenge` in `src/containers`
+  - Use the array of `USERS` from the file `src/utils.js`, list of users showing their avatar and firstName and lastName.
+  - Implementar la funcionabilidad eliminar usuario.
+  - Create a input search and filter by firstName or lastName.
+  - Agregar un select que permita ordenar los usuarios por edad de menor a mayor y de mayor a menor.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  **Bonus:**
+  - Use Material-UI or styled-components to style the component 
+  - Use REDUX y crea el store de users para el manejo de los datos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Third challenge
+In `src/App.js`:
+  - Create a [`/first`]((http://localhost:3000/first)), [`/second`]((http://localhost:3000/second)), [`/third`]((http://localhost:3000/third)) and [`/fourth`]((http://localhost:3000/fourth)) routes cada una con su respectivo componente.
+  
+    Note: Utilizar el archivo `FirstChallenge.js` para la ruta `/first` and `SecondChallenge.js` para la ruta `/second`
 
-### `npm run eject`
+  - In the file `src/components/Header.js` crea unos botones que permitan la navegación entre las 4 rutas creadas utilizando react-router.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  **Bonus:** 
+  - Si accede mediante una ruta que no existe debe redireccionar a `/not-found`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Fourth challenge
+In the file `src/containers/FourthChallenge.js`:
+  - Se necesita evitar que se generen renders innecesarios cuando actualiza uno de los inputs.
+  Nota: Si se actualiza el input de `Name` el componente `AgeDisplay` no debería generar un render.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  **Bonus:**
+  - Use Material-UI or styled-components to style the components.
+  - Implement unit test
